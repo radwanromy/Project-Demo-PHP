@@ -1,0 +1,168 @@
+<?php
+session_start();
+	if(isset($_COOKIE['flag'])){
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<body>
+	</body>
+
+	<table height = "50px" width = "100%"  border="1">
+		<tr height = "100px">
+<td colspan="2" > <section align='right'>
+				 <h1>Logged in as <a href="profile.html">Radwan Romy</a><a href="logout.php">| Logout</a> </h1>
+			</section>
+			<img src="../Image/Capturcsdfcsde.JPG" width="280" height="150" />
+			</td>
+		</tr>
+		<tr height = "30px">
+		<th >
+		    <h1>Account</h1>
+		</th>
+		<th rowspan="2">
+		  <form action="ha_dash.html" method="get">
+        <fieldset>
+          <h3 style="color:goldenrod;font-size:40px;" align ="center">  
+ Hotel System Admin Dashboard<br>🏠Add Room🏠</h3>
+           <table border="0" align="center">
+         <tr>
+           <td rowspan="8" width="300px" align="center" >
+               <h1 >Room Details</h1>
+           </td>
+            <td width="250px" align="right">
+                <h3>
+                Location
+             </h3>
+            </td>
+             <td width="250px" align="center"> 
+              <select name="loc" id="loc" border="0">
+							<option value="">Barishal (বরিশাল Barishal)</option>
+							<option value="">Chittagong (চট্টগ্রাম Chittagong)</option>
+							<option value="">Dhaka (ঢাকা Dhaka)</option>
+							<option value="">Mymensingh (ময়মনসিংহ Mymensingh)</option>
+							<option value="">Khulna (খুলনা Khulna)</option>
+							<option value="">Rajshahi (রাজশাহী Rajshahi)</option>
+							<option value="">Rangpur (রংপুর Rangpur)</option>
+							<option value="">Sylhet (সিলেট Sylhet)</option>
+						</select><br>
+             </td>
+         </tr>
+        <tr> <td width="250px" align="right">
+                <h3>
+                Quality/Type
+             </h3>
+            </td>
+             <td width="250px" align="center"> 
+              <select name="loc" id="loc" border="0">
+							<option value="">5 Stars</option>
+							<option value="">4 Stars</option>
+							<option value="">3 Stars</option>
+							<option value="">2 Stars</option>
+							<option value="">1 Stars</option>
+							<option value="">Camping</option>
+						</select><br>
+            </td>
+        </tr>
+        <tr>
+             
+            <td align="right">
+             <h3>
+                 Room Number
+             </h3>   
+            </td>
+            <td align="center">
+                <h3><input type="text" name="" value="" placeholder="Enter The Room Number"></h3> 
+            </td>
+        </tr>
+         <tr> <td width="250px" align="right">
+                <h3>
+                Room Type
+             </h3>
+            </td>
+             <td width="250px" align="center"> 
+              <select name="loc" id="loc" border="0">
+							<option value="" >Non_AC</option>
+							<option value="">AC</option>
+							<option value="">Delux</option>
+							<option value="">Luxary</option>
+							<option value="">Suite</option>
+							<option value="">VVIP_Suite</option>
+							
+						</select><br>
+           
+            </td>
+        </tr>
+               <tr> <td width="250px" align="right">
+                <h3>
+                Bed Type
+             </h3>
+            </td>
+             <td width="250px" align="center"> 
+              <select name="loc" id="loc" border="0">
+							<option value="" >Single</option>
+							<option value="">Double(2 single Beded Room)</option>
+							<option value="">Couple(1 Big Beded Room)</option>
+							<option value="">Family(Max 6 Person)</option>
+						</select><br>
+           
+            </td>
+        </tr>
+          <tr>
+             
+            <td align="right">
+             <h3>
+                Price
+             </h3>   
+            </td>
+            <td align="center">
+                <h3><input type="text" name="" value="" placeholder="Enter The Room Price"></h3> 
+            </td>
+        </tr>
+       <tr>
+           <td>
+              <h3 align="right"> Room Booked?<br>
+       <input type="radio" name="booked" value="" placeholder="" checked="checked"> No
+       <input type="radio" name="booked" value="" placeholder=""> Yes </h3>
+           </td>
+           <td  align="center">
+              <input  type="submit" name="" value="Add Room" placeholder="" style="font-size: 50px" width="250px">
+           </td>
+       </tr>
+           
+              </table>
+        </fieldset>
+    </form>
+
+		</th>
+		<tr>
+			<td align = 'center' width="200"><a href="Registration.html"><u>. Register Employee</u></a><br>
+			
+				<a href="addRoom.php"><u>. Add Room</u></a><br>
+              <a href="HA_Customer_Regi.php"><u>.Customer Registration</u></a><br>
+              <a href="H_Checkout.php"><u>. Customer Check Out</u></a><br>
+               <a href="profile.php"><u>. View Profile</u></a><br>
+               <a href="edit_profile.php"><u>. Edit Profile</u></a><br>
+               <a href="picture.php"><u>. Change Profile Picture</u></a><br>
+               <a href="change_password.html"><u>. Change Password</u></a><br>
+               <a href="logout.php"><u>. Logout</u></a><br>
+               <a href="Forgot_password.html"><u>. Forgot Password</u></a><br>
+                <br>
+			</td>
+		</tr>
+		<tr>
+		    <td align="center" colspan="2">
+            
+		        Copyright(C) 2017
+		    </td>
+		</tr>
+	</table>
+	</head>
+</html>
+<?php
+	
+	}else{
+		header('location: ../view/login.php');
+	}
+?>
